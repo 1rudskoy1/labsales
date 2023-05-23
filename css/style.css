@@ -98,7 +98,7 @@ body {
   margin-bottom: 28px;
 }
 .offer__header_bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 .offer-subtext__header {
   font-weight: 400;
@@ -108,7 +108,7 @@ body {
   margin-bottom: 0px;
 }
 .offer-subtext__price {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 35px;
   line-height: 70px;
   margin-top: 8px;
@@ -259,7 +259,7 @@ body {
   width: 100%;
   height: 665px;
   position: absolute;
-  top: 120px;
+  top: 160px;
   z-index: 0;
 }
 .suggestions-map {
@@ -579,7 +579,7 @@ body {
   position: relative;
 }
 .form-check__text {
-  font-weight: 200;
+  font-weight: 250;
   font-size: 14px;
   line-height: 16px;
   color: #212d55;
