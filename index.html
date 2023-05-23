@@ -30,7 +30,7 @@
                     </li>
                     <li class="navigation-wrap navigation-wrap-burger">
                         <span class="navigation-wrap__menu">Меню</span>
-                        <img class="navigation-wrap__link_burger" src="./img/menu 1.svg" alt="burger">
+                        <img class="navigation-wrap__link_burger" data-open-menu src="./img/menu 1.svg" alt="burger">
                     </li>
                     <div class="nav-mobile-open">
                         <div class="container">
@@ -39,17 +39,18 @@
                                     <img class="navigation-wrap__link_logo" src="./img/Лого 2 4.svg" alt="logo">
                                 </div>
                                 <div class="navigation-wrap navigation-wrap-close">
-                                    <img class="navigation-wrap__link_close" src="./img/close.svg" alt="burger">
+                                    <img class="navigation-wrap__link_close" data-close-menu src="./img/close.svg"
+                                        alt="burger">
                                 </div>
                             </div>
                             <nav class="navigation nav-mobile-under">
                                 <ul class="nav-mobile-items">
                                     <li class="nav-mobile-item">
                                         <span class="nav-mobile-item__head"> Жилые комплексы <img
-                                                class="nav-mobile-item__down" data-anim src="./img/vector-down.svg"
-                                                alt="down">
+                                                class="nav-mobile-item__down animation-rotate" data-anim
+                                                src="./img/vector-down.svg" alt="down">
                                         </span>
-                                        <ul class="mobile-items">
+                                        <ul class="mobile-items animation-colapse">
                                             <li class="mobile-item">
                                                 <a class="mobile-item__link">ЖК Космос</a>
                                             </li>
@@ -66,9 +67,9 @@
                                     </li>
                                     <li class="nav-mobile-item">
                                         <span class="nav-mobile-item__head"> О компании <img
-                                                class="nav-mobile-item__down" data-anim src="./img/vector-down.svg"
-                                                alt="down"></span>
-                                        <ul class="mobile-items">
+                                                class="nav-mobile-item__down animation-rotate" data-anim
+                                                src="./img/vector-down.svg" alt="down"></span>
+                                        <ul class="mobile-items animation-colapse">
                                             <li class="mobile-item">
                                                 <a class="mobile-item__link">Квартиры</a>
                                             </li>
@@ -79,9 +80,9 @@
                                     </li>
                                     <li class="nav-mobile-item">
                                         <span class="nav-mobile-item__head"> Как купить <img
-                                                class="nav-mobile-item__down" data-anim src="./img/vector-down.svg"
-                                                alt="down"></span>
-                                        <ul class="mobile-items">
+                                                class="nav-mobile-item__down animation-rotate" data-anim
+                                                src="./img/vector-down.svg" alt="down"></span>
+                                        <ul class="mobile-items animation-colapse">
                                             <li class="mobile-item">
                                                 <a class="mobile-item__link">Ипотека</a>
                                             </li>
@@ -102,10 +103,10 @@
                                     <li class="nav-mobile-item">
                                         Контакты
                                     </li>
-                                    <li class="navigation-wrap">
-                                        <div class="navigation-wrap__link navigation-wrap__link_phone">+7 (918)
+                                    <li class="navigation-wrap mobile-item__action">
+                                        <div class="mobile-item__phone">+7 (918)
                                             377-48-10</div>
-                                        <div class="navigation-wrap__link navigation-wrap__link_price">
+                                        <div class="mobile-item__price">
                                             Заказать звонок
                                         </div>
                                     </li>
@@ -115,7 +116,7 @@
                     </div>
                 </ul>
             </nav>
-            <nav class="over-navigation-mobile">
+            <nav class="over-navigation">
                 <ul class="navigation">
                     <li class="navigation-wrap">
                         <img class="navigation-wrap__link_logo" src="./img/logo.svg" alt="logo">
@@ -236,7 +237,6 @@
                             <div class="advantage-background">
                                 <img class="advantage-background__img" src="./img/key 1.svg" alt="key">
                                 <div class="advantage-background-sub-dot sug-dot">
-
                                 </div>
                             </div>
                             <div class="advantage-info">
@@ -244,8 +244,6 @@
                                 <span class="advantage-info__subtext suggestion-wrap__state">2015</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide ">
                         <div class="advantage swiper-slide-advantage">
                             <div class="advantage-background">
                                 <img class="advantage-background__img" src="./img/office-building 1.svg" alt="key">
@@ -272,8 +270,6 @@
                                 <span class="advantage-info__subtext suggestion-wrap__state">Кирпичный</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide ">
                         <div class="advantage swiper-slide-advantage">
                             <div class="advantage-background">
                                 <img class="advantage-background__img" src="./img/star (2) 1.svg" alt="key">
@@ -287,6 +283,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="swiper-slide ">
                         <div class="advantage swiper-slide-advantage">
                             <div class="advantage-background">
@@ -300,8 +297,7 @@
                                 <span class="advantage-info__subtext suggestion-wrap__state">2 корпуса</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide ">
+
                         <div class="advantage swiper-slide-advantage">
                             <div class="advantage-background">
                                 <img class="advantage-background__img" src="./img/parking (1) 1.svg" alt="key">
@@ -315,6 +311,8 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="swiper-slide ">
                         <div class="advantage swiper-slide-advantage">
                             <div class="advantage-background">
@@ -328,8 +326,6 @@
                                 <span class="advantage-info__subtext suggestion-wrap__state">Дет.площадки</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide ">
                         <div class="advantage swiper-slide-advantage">
                             <div class="advantage-background">
                                 <img class="advantage-background__img" src="./img/putty-knife 1.svg" alt="key">
@@ -521,8 +517,10 @@
         <div class="container">
             <h2 class="section-header">Описание Жилого Комплекса</h2>
             <div class="section-header-text">Нажимайте
-                чтобы подробно ознакомится с проектом </div>
-            <div class="suggestions">
+                <pre style="display:contents">< ></pre>
+                чтобы подробно ознакомится с проектом
+            </div>
+            <div class="suggestions suggestions-mobile">
                 <div class="advantage swiper-advantage">
                     <div class="advantage-background swiper-advantage-background ">
                         <div class="advantage-background-sub-dot sug-dot">

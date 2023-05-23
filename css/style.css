@@ -260,7 +260,7 @@ body {
   height: 665px;
   position: absolute;
   top: 120px;
-  z-index: -2;
+  z-index: 0;
 }
 .suggestions-map {
   flex-direction: column;
@@ -269,12 +269,11 @@ body {
   padding-top: 57px;
 }
 .suggestion-map {
-  width: 319px;
-}
-.suggestion-map {
   max-height: 102px;
   max-width: 319px;
+  width: 319px;
   margin-bottom: 15px;
+  z-index: 2;
 }
 .suggestion-map-background {
   width: 100%;
@@ -523,6 +522,9 @@ body {
   margin-bottom: 25px;
   height: 71px;
   box-shadow: -5px 5px 19px rgb(33 45 85 / 20%);
+  font-size: 18px;
+  line-height: 21px;
+  color: #31bef4;
 }
 .form__input:focus {
   outline: none;
@@ -538,10 +540,22 @@ body {
   left: -5px;
   z-index: 10;
 }
-input[placeholder],
-input::-moz-placeholder,
-input:-moz-placeholder,
-input:-ms-input-placeholder {
+::-webkit-input-placeholder {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a8abb7;
+}
+::-moz-placeholder {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a8abb7;
+} /* Firefox 19+ */
+:-moz-placeholder {
+  font-family: "Gilroy";
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -561,6 +575,8 @@ input:-ms-input-placeholder {
 .form-check {
   width: 100%;
   text-align: center;
+  height: 41px;
+  position: relative;
 }
 .form-check__text {
   font-weight: 200;
@@ -568,18 +584,22 @@ input:-ms-input-placeholder {
   line-height: 16px;
   color: #212d55;
   position: relative;
+  padding-left: 10px;
 }
 .form-check__text_link {
   text-decoration: none;
   color: #31bef4;
 }
+.form-check {
+  display: flex;
+  align-items: stretch;
+  width: 80%;
+  margin: 0 auto;
+}
 .form-chek__box {
-  position: absolute;
   cursor: pointer;
   z-index: 10;
   opacity: 0;
-  bottom: -4px;
-  left: 56px;
   width: 20px;
   height: 20px;
   border-radius: 5px;
@@ -588,11 +608,12 @@ input:-ms-input-placeholder {
   content: "";
   position: absolute;
   background: #ffffff;
-  box-shadow: 0px 4px 13px rgba(34, 34, 34, 0.15);
+  box-shadow: 0px 4px 13px rgba(34, 34, 34, 0.3);
   border-radius: 5px;
   width: 20px;
   height: 20px;
-  left: -32px;
+  left: -23px;
+  top: -3px;
 }
 .form-chek__box:checked + .form-check__text::after {
   content: "";
@@ -602,8 +623,9 @@ input:-ms-input-placeholder {
   background-position: center;
   width: 10px;
   height: 10px;
-  left: -27px;
-  top: 5px;
+  left: -19px;
+  top: 3px;
+  z-index: 0;
 }
 .dignities__header {
   display: none;
@@ -657,14 +679,22 @@ input:-ms-input-placeholder {
   color: #212d55;
   margin-right: 10px;
 }
+.navigation-mobile {
+  display: none;
+}
 .nav-mobile-open {
   position: fixed;
   left: 0;
   top: 0;
   background-color: #212d55;
   width: 100%;
-  height: fit-content;
   z-index: 11;
+  overflow: hidden;
+  max-height: 0;
+  transition: 1s;
+}
+.nav-mobile-open__active {
+  max-height: 550px;
 }
 .navigation-wrap__link_close {
   cursor: pointer;
@@ -684,6 +714,9 @@ input:-ms-input-placeholder {
 }
 .nav-mobile-items {
   list-style: none;
+}
+.nav-mobile-over {
+  margin-top: 13px;
 }
 .nav-mobile-item {
   font-weight: 600;
@@ -724,6 +757,7 @@ input:-ms-input-placeholder {
   right: -17px;
   cursor: pointer;
   transition: 0.5s;
+  transform: rotate(180deg);
 }
 .nav-mobile-item__head {
   display: block;
@@ -731,8 +765,63 @@ input:-ms-input-placeholder {
   position: relative;
 }
 .animation-rotate {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 .animation-colapse {
   max-height: 0px;
+}
+.mobile-item__phone {
+  font-family: "Gilroy";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+
+.mobile-item__price {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: underline;
+}
+.mobile-item__action {
+  margin-bottom: 49px;
+}
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+[class*="balloon__close-button"] {
+  display: none !important;
+}
+[class*="balloon__layout"] {
+  background: #ffffff;
+  box-shadow: 0px 3px 15px rgba(33, 45, 85, 0.1);
+  border-radius: 10px;
+  width: 162px;
+  height: 27px;
+  padding: 4px 10px;
+  box-sizing: border-box !important;
+  border: none !important;
+}
+[class*="controls__control_toolbar"] {
+  display: none !important;
+}
+[class*="controls__control"] {
+  display: none !important;
+}
+
+.baloon__header {
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  position: absolute;
+  display: block;
+  width: 122%;
+  left: 0px;
+  top: -12px;
+  text-align: center;
+  color: #31bef4;
 }

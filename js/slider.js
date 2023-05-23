@@ -36,7 +36,7 @@ const swiperAdvantage = new Swiper('.swiper-advantages', {
     el: '.swiper-pagination-advantage',
     clickable: true
   },
-  slidesPerView: 3
+  slidesPerView: 0.95
 });
 
 const swiperSuggestions = new Swiper('.swiper-suggestions', {

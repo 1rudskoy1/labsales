@@ -65,6 +65,20 @@
   }
 }
 
+@media only screen and (max-width: 960px) {
+  .over-navigation,
+  .under-navigation {
+    display: none;
+  }
+  .header::after,
+  .header::before {
+    display: none;
+  }
+  .navigation-mobile {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 886px) {
   .image-mini-slider__slide {
     width: auto;
@@ -75,5 +89,100 @@
   .image-mini-slider__image img {
     max-width: none;
     width: 95%;
+  }
+  .suggestions-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .suggestions-mobile .advantage {
+    margin-bottom: 20px;
+  }
+  .suggestions-mobile .advantage,
+  .suggestions-mobile .advantage-background {
+    width: 100%;
+    text-align: center;
+  }
+  .input-wrap {
+    width: 100%;
+  }
+  .form__input {
+    max-width: initial;
+  }
+  .form__button {
+    width: 100%;
+    max-width: initial;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .offer__header {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .offer-subtext__header {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+  }
+  .offer-subtext__price {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .btn {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .section-header {
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+  }
+  .dignities__header {
+    display: block;
+  }
+  .advantages {
+    margin-top: 60px;
+  }
+  .section-header-text {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+  .slide-info {
+    width: 290px;
+    height: 266px;
+    overflow: hidden;
+  }
+  .slide-info__header {
+    margin-bottom: 24px;
+    margin-top: 0px;
+  }
+  .swiper-slide__img {
+    height: 507px;
+  }
+  .suggestions-map {
+    height: 600px;
+    justify-content: flex-start;
+    padding-top: 52px;
+  }
+  .suggestion-map:nth-child(3),
+  .suggestion-map:nth-child(4),
+  .suggestion-map:nth-child(5) {
+    display: none;
+  }
+  .suggestion-map {
+    max-width: inherit;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .dignities .advantages {
+    display: none;
+  }
+  .swiper-advantages {
+    display: block;
+  }
+  .swiper-slide-advantage {
+    max-width: inherit;
   }
 }

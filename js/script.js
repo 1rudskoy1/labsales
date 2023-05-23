@@ -1,5 +1,14 @@
 const arrayDown = document.querySelectorAll('[data-anim]');
+const burger = document.querySelector('[data-open-menu]');
+const closeMenu = document.querySelector('[data-close-menu]');
+const open = document.querySelector('.nav-mobile-open');
 
+burger.addEventListener('click', (e)=> {
+  toggle(open, 'nav-mobile-open__active');
+});
+closeMenu.addEventListener('click', (e)=> {
+  toggle(open, 'nav-mobile-open__active');
+});
 function animationsPin (array) {
   array.forEach(item => {
     item.addEventListener('click', (e) => addAnimation(e.target));
